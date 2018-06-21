@@ -1,0 +1,24 @@
+<% if session[:success] %>
+  <div class="flash success">
+    <p><%= session.delete(:success) %></p>
+  </div>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Airline</th>
+      <th>Flight Number</th>
+      <th>Destination</th>
+      <th>Departure Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= session[:airline] %> </td>
+      <td><%= session[:flight_number] %></td>
+      <td><%= session[:destination] %></td>
+      <td><%= session[:departure_time] %></td>
+    </tr>
+  </tbody>
+</table>

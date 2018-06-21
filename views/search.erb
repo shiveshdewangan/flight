@@ -1,0 +1,31 @@
+<% if session[:message] %>
+  <div class="flash error">
+    <p><%= session.delete(:message) %></p>
+  </div>
+<% end %>
+
+<p>Session Message: <%= session.inspect %></p>
+
+<form action="/search" method="GET">   
+  <p>
+    <label>Airline:
+      <input type="text" required name="airline" placeholder="Airline Company" value = <%= params[:airline] %> >
+    </label>
+  </p>
+  <p>
+    <label>Flight Number:
+      <input type="text" name="flight_number" placeholder="Flight Number" value = <%= params[:flight_number] %> >
+    </label>
+  </p>
+  <p>
+    <label>Desitnation:
+      <input type="text" name="destination" placeholder="Destination City" value = <%= params[:destination] %> >
+    </label>
+  </p>
+  <p>
+    <label>Departure Time:
+      <input type="text" name="departure_time" placeholder="Departure Time" value = <%= params[:departure_time] %> >
+    </label>
+  </p>
+  <button type="submit">Submit</button>
+</form>
