@@ -1,1 +1,28 @@
-<h1>Your session has been reset</h1>
+<h2>List of all the Flights</h2>
+
+<% if session[:success] %>
+  <div class="flash success">
+    <p><%= session.delete(:success) %></p>
+  </div>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Airline</th>
+      <th>Flight Number</th>
+      <th>Destination</th>
+      <th>Departure Time</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<% session[:flights].each do |flight| %>
+    <tr>
+      <td><%= flight["airline"] %> </td>
+      <td><%= flight["flight_number"] %></td>
+      <td><%= flight["destination"] %></td>
+      <td><%= flight["departure_time"] %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
