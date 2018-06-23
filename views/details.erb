@@ -15,10 +15,10 @@
   </thead>
   <tbody>
     <tr>
-      <td><%= session[:airline] %> </td>
-      <td><%= session[:flight_number] %></td>
-      <td><%= session[:destination] %></td>
-      <td><%= session[:departure_time] %></td>
+      <td><%= session[:details]["airline"] %> </td>
+      <td><%= session[:details]["flight_number"] %></td>
+      <td><%= session[:details]["destination"] %></td>
+      <td><%= session[:details]["departure_time"] %></td>
     </tr>
   </tbody>
 </table>

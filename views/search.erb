@@ -1,6 +1,6 @@
-<% if session[:message] %>
+<% if session[:error] %>
   <div class="flash error">
-    <p><%= session.delete(:message) %></p>
+    <p><%= session.delete(:error) %></p>
   </div>
 <% end %>
 
@@ -14,17 +14,17 @@
   </p>
   <p>
     <label>Flight Number:
-      <input type="text" name="flight_number" placeholder="Flight Number" value = <%= params[:flight_number] %> >
+      <input type="text" required name="flight_number" placeholder="Flight Number" value = <%= params[:flight_number] %> >
     </label>
   </p>
   <p>
     <label>Desitnation:
-      <input type="text" name="destination" placeholder="Destination City" value = <%= params[:destination] %> >
+      <input type="text" required name="destination" placeholder="Destination City" value = <%= params[:destination] %> >
     </label>
   </p>
   <p>
     <label>Departure Time:
-      <input type="text" name="departure_time" placeholder="Departure Time" value = <%= params[:departure_time] %> >
+      <input type="text" required name="departure_time" placeholder="Hrs:Mins Format" value = <%= params[:departure_time] %> >
     </label>
   </p>
   <button type="submit">Submit</button>
