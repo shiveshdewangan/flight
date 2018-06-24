@@ -7,22 +7,22 @@
 <form action="/search" method="POST">   
   <p>
     <label>Airline:
-      <input type="text" required name="airline" placeholder="Airline Company" value = <%= params[:airline] %> >
+      <input type="text" required name="airline" placeholder="Airline Company" value = "<%= params[:airline].to_s %>" >
     </label>
   </p>
   <p>
     <label>Flight Number:
-      <input type="text" required name="flight_number" placeholder="Flight Number" value = <%= params[:flight_number] %> >
+      <input type="text" required name="flight_number" placeholder="Flight Number" value = "<%= params[:flight_number] %>" >
     </label>
   </p>
   <p>
     <label>Desitnation:
-      <input type="text" required name="destination" placeholder="Destination City" value = <%= params[:destination] %> >
+      <input type="text" required name="destination" placeholder="Destination City" value = "<%= params[:destination] %>" >
     </label>
   </p>
   <p>
     <label>Departure Time:
-      <input type="text" required name="departure_time" placeholder="Hrs:Mins Format" value = <%= params[:departure_time] %> >
+      <input type="text" required name="departure_time" placeholder="Hrs:Mins Format" value = "<%= params[:departure_time] %>" >
     </label>
   </p>
   <button type="submit">Submit</button>

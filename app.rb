@@ -12,20 +12,21 @@ before do
 end
 
 def valid_airline?(airline_value)
+  arr = ("a".."z").to_a << " "
   airline_value.chars.each do |char|
-    return false if !("a".."z").to_a.include?(char)
+    return false if !arr.include?(char.downcase)
   end
 end
 
 def valid_flight_number?(flight_number_value)
   flight_number_value.to_s.chars.each do |char|
-    return false if !("0".."9").to_a.include?(char)
+    return false if !("0".."9").to_a.include?(char.downcase)
   end
 end
 
 def valid_destination?(destination_value)
   destination_value.chars.each do |char|
-    return false if !("a".."z").to_a.include?(char)
+    return false if !("a".."z").to_a.include?(char.downcase)
   end
 end
 
