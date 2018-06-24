@@ -4,7 +4,7 @@
   </div>
 <% end %>
 
-<form action="/search" method="POST">   
+<form action="/search" method="POST" class="form-group">   
   <p>
     <label>Airline:
       <input type="text" required name="airline" placeholder="Airline Company" value = "<%= params[:airline].to_s %>" >
